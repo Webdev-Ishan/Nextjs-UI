@@ -2,6 +2,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import clsx from "clsx"; // or use 'classnames' if you prefer
+
+// Alias 'clsx' as 'cn' for compatibility with the rest of the code
+const cn = clsx;
 
 
 
@@ -19,17 +23,23 @@ export const MenuItem = ({
   active,
   item,
   children,
+  className
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  className?:string
 }) => {
   return (
-    <div onMouseEnter={() => setActive(item)} className="relative ">
+    <div onMouseEnter={() => setActive(item)} className={`relative`} >
       <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+          transition={{ duration: 0.3 }}
+        className={cn(
+          "cursor-pointer hover:text-blue-500",
+          className, // <-- custom styles here
+          
+        )}
       >
         {item}
       </motion.p>
