@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import BackgroundBeam from "@/components/BackgroundBeam"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,7 +29,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <div className="fixed inset-0 -z-10">
+          <BackgroundBeam />
+        </div>
         <Navbar/>
+        <HeroSection/>
         {children}
       </body>
     </html>

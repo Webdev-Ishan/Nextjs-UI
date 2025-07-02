@@ -22,7 +22,9 @@ function Navbar({ className }: { className?: string }) {
     <div className={cn("fixed top-3 inset-x-0 w-full z-50", className)}>
       <nav className="flex items-center justify-between w-[98%] border border-white mr-2 ml-2 rounded-3xl px-4 md:px-8 bg-white dark:bg-black shadow">
         <div className="flex items-center">
-          <h1 className="text-blue-500 text-2xl md:text-3xl font-bold">Codex</h1>
+          <h1 className="text-blue-500 text-2xl md:text-3xl font-bold">
+            Codexium
+          </h1>
         </div>
         {/* Hamburger button for mobile */}
         <button
@@ -38,52 +40,87 @@ function Navbar({ className }: { className?: string }) {
             xmlns="http://www.w3.org/2000/svg"
           >
             {mobileOpen ? (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
             ) : (
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8h16M4 16h16" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 8h16M4 16h16"
+              />
             )}
           </svg>
         </button>
         {/* Desktop Menu */}
         <div className="hidden md:flex flex-1 justify-evenly">
           <Menu setActive={setActive}>
-            <MenuItem setActive={setActive} active={active} item="Services" >
+            <MenuItem setActive={setActive} active={active} item="Services">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                <HoveredLink href="/interface-design">
+                  Interface Design
+                </HoveredLink>
+                <HoveredLink href="/seo">
+                  Search Engine Optimization
+                </HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="Documents">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                <HoveredLink href="/interface-design">
+                  Interface Design
+                </HoveredLink>
+                <HoveredLink href="/seo">
+                  Search Engine Optimization
+                </HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="Themes">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                <HoveredLink href="/interface-design">
+                  Interface Design
+                </HoveredLink>
+                <HoveredLink href="/seo">
+                  Search Engine Optimization
+                </HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
               </div>
             </MenuItem>
             <MenuItem setActive={setActive} active={active} item="FAQs">
               <div className="flex flex-col space-y-4 text-sm">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                <HoveredLink href="/interface-design">
+                  Interface Design
+                </HoveredLink>
+                <HoveredLink href="/seo">
+                  Search Engine Optimization
+                </HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
               </div>
             </MenuItem>
-            <MenuItem className="text-green-400 "  setActive={setActive} active={active} item="About Us"  >
+            <MenuItem
+              className="text-green-400 "
+              setActive={setActive}
+              active={active}
+              item="About Us"
+            >
               <div className="flex flex-col space-y-4 text-sm ">
                 <HoveredLink href="/web-dev">Web Development</HoveredLink>
-                <HoveredLink href="/interface-design">Interface Design</HoveredLink>
-                <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
+                <HoveredLink href="/interface-design">
+                  Interface Design
+                </HoveredLink>
+                <HoveredLink href="/seo">
+                  Search Engine Optimization
+                </HoveredLink>
                 <HoveredLink href="/branding">Branding</HoveredLink>
               </div>
             </MenuItem>
