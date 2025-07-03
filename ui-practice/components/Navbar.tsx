@@ -20,7 +20,7 @@ function Navbar({ className }: { className?: string }) {
 
   return (
     <div className={cn("fixed top-3 inset-x-0 w-full z-50", className)}>
-      <nav className="flex items-center justify-between w-[98%] border border-white mr-2 ml-2 rounded-3xl px-4 md:px-8 bg-white dark:bg-black shadow">
+      <nav className="flex items-center justify-between w-[98%]  mr-2 ml-2  px-4 md:px-8 bg-white dark:bg-black shadow">
         <div className="flex items-center">
           <h1 className="text-blue-500 text-2xl md:text-3xl font-bold">
             Codexium

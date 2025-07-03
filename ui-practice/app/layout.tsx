@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import BackgroundBeam from "@/components/BackgroundBeam"
+import BackgroundBeam from "@/components/BackgroundBeam";
+import Spotlights from "@/components/Spotlight";
+import Gradient from "@/components/Gradient";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -29,11 +31,21 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-      <div className="fixed inset-0 -z-10">
+        {/* Both background effects in one fixed container */}
+        <div className="fixed inset-0 -z-10 bg-transparent">
           <BackgroundBeam />
+          <Spotlights />
         </div>
-        <Navbar/>
-        <HeroSection/>
+        <Navbar />
+        <HeroSection />
+        <div className="w-full p-4  mb-8 h-auto flex flex-wrap gap-10 justify-center items-center">
+          <Gradient />
+          <Gradient />
+          <Gradient />
+          <Gradient />
+          <Gradient />
+          <Gradient />
+        </div>
         {children}
       </body>
     </html>
